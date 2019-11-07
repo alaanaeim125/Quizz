@@ -1,0 +1,84 @@
+- Database collection --> Database name quizzes
+
+1- simple od collection 
+
+1- student 
+{
+    "_id" : ObjectId("5dc123f2607e272608750208"),
+    "Date" : ISODate("2019-11-05T07:25:38.711Z"),
+    "FullName" : "Miiina Naeeim",
+    "Email" : "mina125@gmail.com",
+    "Password" : "ALAAalaa125",
+    "typeUser" : "student",
+    "__v" : 0
+}
+
+2- teacher
+{
+    "_id" : ObjectId("5dbd3181e120fd35cc6b6e7a"),
+    "Date" : ISODate("2019-11-02T07:34:25.914Z"),
+    "FullName" : "Alaa Naeim",
+    "Email" : "progalaa125@gmail.com",
+    "Password" : "ALAAalaa125",
+    "typeUser" : "teacher",
+    "__v" : 0,
+    "Specialist" : "Math Language"
+}
+
+3- quiz
+{
+    "_id" : ObjectId("5dc2e52df7888f0970b43fd1"),
+    "Question" : [ 
+        "Find the sum of 111 + 222 + 333 ?", 
+        "Subtract 457 from 832 ?", 
+        "50 times 5 is equal to ?"
+    ],
+    "Answers" : [ 
+        {
+            "Ans1" : "7000",
+            "Ans2" : "666",
+            "Ans3" : "10",
+            "Ans4" : "100"
+        }, 
+        {
+            "Ans1" : "375",
+            "Ans2" : "57",
+            "Ans3" : "120",
+            "Ans4" : "254"
+        }, 
+        {
+            "Ans1" : "120",
+            "Ans2" : "258",
+            "Ans3" : "550",
+            "Ans4" : "Non Of Above"
+        }
+    ],
+    "CorrectAnswer" : [ 
+        "666", 
+        "375", 
+        "Non Of Above"
+    ],
+    "Date" : ISODate("2019-11-06T15:22:21.982Z"),
+    "TeacherName" : "Alaa Naeim",
+    "TeacherId" : "5dbd3181e120fd35cc6b6e7a",
+    "Specialist" : "Math Language",
+    "Publish" : "Publish",
+    "AboutQuiz" : "Math quiz helps us to increase our knowledge.",
+    "__v" : 0
+}
+
+4- quizResult
+{
+    "_id" : ObjectId("5dc40f1e39ccf816d07a1d96"),
+    "StudentAnswers" : [ 
+        "100", 
+        "375", 
+        "Non Of Above"
+    ],
+    "Date" : ISODate("2019-11-07T12:42:32.397Z"),
+    "StudentId" : "5dc123f2607e272608750208",
+    "QuizDegree" : "2 / 3",
+    "QuizAbout" : "Math quiz helps us to increase our knowledge.",
+    "QuizID" : "5dc2e52df7888f0970b43fd1",
+    "__v" : 0
+}
