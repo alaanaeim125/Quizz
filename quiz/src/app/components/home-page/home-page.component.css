@@ -1,0 +1,29 @@
+.sticky-top {
+  top: 90px;
+}
+
+.startQuiz {
+  padding: 1px;
+  margin: 0;
+}
+
+.Quizes {
+  max-height: 450px;
+  margin-bottom: 20px;
+}
+
+.QuizAbout {
+  height: 50px;
+  overflow: hidden;
+}
+
+.All {
+  background-color: #606C88;
+  color: #ffffff;
+}
+
+.countquizes {
+  float: right;
+  font-size: 14px;
+  padding: 6px;
+}

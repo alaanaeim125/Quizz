@@ -1,0 +1,65 @@
+<div class="profileTeacher container">
+
+    <div class="row">
+        <div class="col-12 details">
+            <div class="row some1">
+                <div class="col-4">
+                    <img class='profile' src="assets/images/student.jpg" width="140" height="130"><br>
+                </div>
+
+                <div class="col-8">
+                    <ul class='info'>
+                        <li><i class="fa fa-user" aria-hidden="true"></i> {{ student.FullName }} </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>{{student.Email}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row some2">
+        <div class="col-12">
+            <button class="btn btn-primary btn-sm btn-update" (click)='profileUpdate()'>Update Profile</button>
+            <span style='float:right'>
+        <h4 class="quizNum3 text-center">{{count}}</h4>
+        <img class='imgQuiz' src="assets/images/quizNum.jpg" style="border-radius: 35px;" width="70" height="70">
+      </span>
+        </div>
+    </div>
+
+
+
+
+    <div class="row AllExams">
+        <div class="col-12">
+            <h1 class="text-center">Quizes You Are Examed It.</h1>
+        </div>
+        <div class="col-lg-4 col-md-6 Quizes" *ngFor='let quiz of QuizesExamIt; let i = index'>
+            <div class="card">
+                <img src="assets/images/quiz1.jpg" class="card-img-top imgQuizs" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Quiz About ??</h5>
+                    <p class="card-text QuizAbout">{{quiz.QuizAbout}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-6">Grade : </div>
+                            <div class="col-6">{{quiz.QuizDegree}}</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-5">Date :</div>
+                            <div class="col-7">{{quiz.Date | date:'d/M/yy, h:mm a'}}</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item startQuiz">
+                        <button class="btn btn-primary btn-block btn-sm" routerLink='/stratQuiz/{{quiz.QuizID}}'>Try Quiz Again</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

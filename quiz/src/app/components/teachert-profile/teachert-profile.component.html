@@ -1,0 +1,76 @@
+<div class="profileTeacher container">
+
+    <div class="row">
+        <div class="col-12 details">
+            <div class="row some1">
+                <div class="col-4">
+                    <img class='profile' src="assets/images/teacher.jpg" width="140" height="130"><br>
+                </div>
+
+                <div class="col-8">
+                    <ul class='info'>
+                        <li><i class="fa fa-user" aria-hidden="true"></i> {{ teacher.FullName }} </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>{{teacher.Email}}</li>
+                        <li><i class="fa fa-language" aria-hidden="true"></i>{{teacher.Specialist}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row some2">
+        <div class="col-12">
+            <button class="btn btn-primary btn-sm btn-update" (click)='profileUpdate()'>Update Profile</button>
+
+            <span style='float:right'>
+        <h4 class="quizNum1 text-center">{{NumberSavedQuizes}}</h4>
+        <img class='imgQuiz' src="assets/images/save.jpg" style="border-radius: 35px;" width="70" height="70">
+      </span>
+            <span style='float:right'>
+        <h4 class="quizNum2 text-center">{{NumberPublishedQuizes}}</h4>
+        <img class='imgQuiz' src="assets/images/publish.jpg" style="border-radius: 35px;" width="70" height="70">
+      </span>
+            <span style='float:right'>
+        <h4 class="quizNum3 text-center">{{NumberallQuizes}}</h4>
+        <img class='imgQuiz' src="assets/images/quizNum.jpg" style="border-radius: 35px;" width="70" height="70">
+      </span>
+        </div>
+    </div>
+
+    <div class="row show-Quizes">
+        <div class="col-12 text-center">
+            <button class="btn btn-primary btn-sm psQuizes" (click)='publishQuizes()'>Published Quizes</button>
+            <button class="btn btn-primary btn-sm psQuizes" (click)='SaveQuizes()'>Saved Quizes</button>
+        </div>
+        <div class="col-12">
+            <h4 class='psave text-center' *ngIf='publish'>Published Quiiiiz</h4>
+            <h4 class='psave text-center' *ngIf='save'>Saved Quiiiiz</h4>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let quiz of QuizArray">
+                    <div class="card">
+                        <i class="fa fa-eye viewQuiz" aria-hidden="true" title="view Quiz" (click)='viewQuiz(quiz._id)'></i>
+                        <img src="assets/images/quiz1.jpg" class="card-img-top imgQuizs" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Quiz About ??</h5>
+                            <p class="card-text QuizAbout">{{quiz.AboutQuiz}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-6">Questions : </div>
+                                    <div class="col-6">{{quiz.Question.length}}</div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-5">Date :</div>
+                                    <div class="col-7">{{quiz.Date | date:'d/M/yy, h:mm a'}}</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

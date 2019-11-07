@@ -1,0 +1,84 @@
+<div class="add_new_quiz row container">
+    <div class="col-md-10 offset-1">
+        <h5 *ngIf='!iid' class="alert alert-success alert-sm text-center">Add New Quizzz !!</h5>
+        <h5 *ngIf='iid' class="alert alert-success alert-sm text-center">Update Quizzz !!</h5>
+        <form name="form" #form="ngForm" (ngSubmit)="SaveQuiz(form.value)">
+
+            <div class="card" *ngFor="let quiz of ArrayQuizes; let i = index">
+                <div *ngIf='i == 0' class="form-group">
+                    <small class="about">Your Quiz Talking About ?!!!</small>
+                    <input type="text" name="AboutQuiz" ngModel [(ngModel)]='quiz.AboutQuiz' class="form-control" required>
+                </div>
+                <i *ngIf='i != 0' class="fa fa-trash" aria-hidden="true" title="Remove Qusetion ?" (click)='RemoveQuestion(i)'></i>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="form-group">
+                            <small class="badge badge-success container-fluid">
+                             <span class="QNumber">Question No.{{i + 1}}</span>    Enter Your Question Title ?
+                            </small>
+                            <input type="text" name="Question{{i}}" ngModel [(ngModel)]='quiz.Question' class="form-control" required>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="form-group">
+                            <small class="badge badge-success container-fluid">Enter Possible First Answer ?</small>
+                            <input type="text" name="Answer1{{i}}" ngModel [(ngModel)]='quiz.Answer1' class="form-control" required>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-group">
+                            <small class="badge badge-success container-fluid">Enter Possible Second Answer ?</small>
+                            <input type="text" name="Answer2{{i}}" ngModel [(ngModel)]='quiz.Answer2' class="form-control" required>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-group">
+                            <small class="badge badge-success container-fluid">Enter Possible Third Answer ?</small>
+                            <input type="text" name="Answer3{{i}}" ngModel [(ngModel)]='quiz.Answer3' class="form-control" required>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-group">
+                            <small class="badge badge-success container-fluid">Enter Possible Fourth Answer ?</small>
+                            <input type="text" name="Answer4{{i}}" ngModel [(ngModel)]='quiz.Answer4' class="form-control" required>
+                        </div>
+                    </li>
+
+                    <li class=" list-group-item ">
+                        <div class="form-group ">
+                            <small class="badge badge-success container-fluid ">Enter Correct Answer <img class='correct_ans' src="assets/images/correct.png "></small>
+                            <input type="text" name="CorrectAnswer{{i}}" ngModel [(ngModel)]='quiz.CorrectAnswer' class="form-control" required>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <br>
+            <hr>
+
+            <div class="row text-center">
+                <div class="col-2">
+                    <span class="btn btn-success btn-block add_Question" (click)='addAnotherQuiz()'>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-4">
+                    <select class="form-control" name="Publish" ngModel [(ngModel)]='quizPublish' required>
+                        <option disabled></option>
+                        <option value="Publish">Publish Quizz</option>
+                        <option value="Save">Save Quizz</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <button *ngIf='iid' class="btn btn-danger btn-block" (click)='DeleteQuiz()'>Delete</button>
+                </div>
+                <div class="col-3">
+                    <button [disabled]='!form.valid' class="btn btn-success btn-block">Save</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

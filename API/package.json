@@ -1,0 +1,19 @@
+{
+  "name": "quiz_api",
+  "version": "1.0.0",
+  "description": "task quiz from 3D company almaadi",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "author": "alaa",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7"
+  }
+}

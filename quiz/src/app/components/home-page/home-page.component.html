@@ -1,0 +1,46 @@
+<div class="row container homePage">
+    <div class="col-lg-3 col-md-5 col-sm-5">
+        <div class="sticky-top">
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" routerLink='/' [ngClass]="{'active': !subject, 'All': subject}" (click)='homePage()'>
+                    All Quizes <span class="badge badge-danger countquizes">{{AllSubjCount}}</span>
+                </a>
+
+                <a class="list-group-item list-group-item-action" *ngFor='let subjectname of subjects; let i = index' routerLink='/' [queryParams]='{subject: subjectname}' [class.active]='subjectname === subject' (click)='filterQuizes()'>
+                    {{ subjectname }}
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-7 col-sm-7">
+        <div class="row">
+            <div class="col-lg-6 col-xs-12 Quizes" *ngFor='let quiz of filteredQuizes'>
+                <div class="card">
+                    <img src="assets/images/quiz1.jpg" class="card-img-top imgQuizs" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Quiz About ??</h5>
+                        <p class="card-text QuizAbout">{{quiz.AboutQuiz}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-6">Questions : </div>
+                                <div class="col-6">{{quiz.Question.length}}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-5">Date :</div>
+                                <div class="col-7">{{quiz.Date | date:'d/M/yy, h:mm a'}}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item startQuiz">
+                            <button class="btn btn-primary btn-block btn-sm" routerLink='/stratQuiz/{{quiz._id}}'>Start Quiz</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
