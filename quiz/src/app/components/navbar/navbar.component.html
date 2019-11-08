@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" routerLink='/'>
+            <img class="logo_image" src="assets/images/quiz.jpg">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto"></ul>
+
+            <ul class="navbar-nav">
+                <li *ngIf='loggedInUser()' class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ userService.CurrentUser.user.FullName }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink='/profile{{userService.CurrentUser.user.typeUser}}/{{userService.CurrentUser.user.userId}}'>
+                            Profile <i class="fa fa-user fa-icon"></i>
+                        </a>
+
+                        <a *ngIf='userService.CurrentUser.user.typeUser == "teacher"' class="dropdown-item" routerLink='/addNewQuiz'>
+                            Add Quiz <i class="fa fa-plus-circle fa-icon"></i>
+                        </a>
+
+
+                        <div class="dropdown-divider"></div>
+                        <a (click)='LogOut()' class="dropdown-item">
+                            LogOut <i class="fa fa-sign-out fa-icon"></i>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-item" routerLinkActive='active' *ngIf='!loggedInUser()'>
+                    <a class="nav-link" routerLink='/login' routerLinkActive="router-link-active">Login</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,50 @@
+<div class="row container Quiiiiz">
+    <div class="col-10 offset-1">
+        <h6 class="alert alert-info alert-sm">
+            Start Quiz, Quiz <strong>{{AboutQuiz}}</strong> , Edited By Teacher: <strong> {{TeacherName}}</strong>
+        </h6>
+
+        <div class="questions">
+            <form name='form' #form='ngForm' (ngSubmit)='result(form.value)'>
+                <div class="card" *ngFor='let quiz of selectedQuiiiz;let i = index'>
+
+                    <h4 class="alert alert-primary container-fluid question">
+                        <span class="badge badge-danger badge_count">Q{{i+1}}</span> {{quiz.Question}}
+                    </h4>
+
+                    <h5 class="custom-control custom-radio badge badge-secondary container-fluid Answers">
+                        <input type="radio" id="Ansone{{i+1}}" [value]="quiz.Answer1" name="Answer{{i}}" ngModel class="custom-control-input" required>
+                        <label class="custom-control-label" for="Ansone{{i+1}}">{{quiz.Answer1}}</label>
+                    </h5>
+
+
+                    <h5 class="custom-control custom-radio badge badge-secondary container-fluid Answers">
+                        <input type="radio" id="Anstwo{{i+1}}" [value]="quiz.Answer2" name="Answer{{i}}" ngModel class="custom-control-input" required>
+                        <label class="custom-control-label" for="Anstwo{{i+1}}">{{quiz.Answer2}}</label>
+                    </h5>
+
+
+                    <h5 class="custom-control custom-radio badge badge-secondary container-fluid Answers">
+                        <input type="radio" id="Ansthree{{i+1}}" [value]="quiz.Answer3" name="Answer{{i}}" ngModel class="custom-control-input" required>
+                        <label class="custom-control-label" for="Ansthree{{i+1}}">{{quiz.Answer3}}</label>
+                    </h5>
+
+                    <h5 class="custom-control custom-radio badge badge-secondary container-fluid Answers">
+                        <input type="radio" id="Ansfour{{i+1}}" [value]="quiz.Answer4" name="Answer{{i}}" ngModel class="custom-control-input" required>
+                        <label class="custom-control-label" for="Ansfour{{i+1}}">{{quiz.Answer4}}</label>
+                    </h5>
+
+
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <button [disabled]='!form.valid' class="btn btn-success btn-block">See Result</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
