@@ -1,0 +1,73 @@
+<div class="row container">
+    <div class="col-10 offset-1 result">
+        <h1 class="complete">Completed</h1>
+        <div class="res">
+            <div class="row">
+                <div class="col-xs-2">
+                    <img src='assets/images/trophy.png' class="img-thumbnail img-preserve" width="150" height="150">
+                </div>
+                <div class="col-xs-9">
+                    <ul>
+                        <li>
+                            <h3>{{StudenName}}</h3>
+                        </li>
+                        <li>
+                            <h2>
+                                {{score}}
+                            </h2>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-10 offset-1 quizAnswer">
+        <h2 class="ans text-center">Questions And Correct Answers</h2>
+
+        <div class="row container Quiiiiz">
+            <div class="col-10 offset-1">
+
+                <div class="questions">
+                    <form name='form' #form='ngForm'>
+                        <div class="card" *ngFor='let quiz of selectedQuiiiz;let i = index'>
+
+                            <h4 class="alert alert-primary container-fluid question">
+                                <span class="badge badge-danger badge_count">Q{{i+1}}</span> {{quiz.Question}}
+                            </h4>
+
+                            <h5 class="custom-control custom-radio badge badge-secondary container-fluid Answers">
+                                <input type="radio" id="Ansone{{i+1}}" [value]="quiz.Answer1" name="Answer{{i}}" ngModel [(ngModel)]='correctAnswer[i]' class="custom-control-input">
+                                <label class="custom-control-label" for="Ansone{{i+1}}">{{quiz.Answer1}}</label>
+                            </h5>
+
+
+                            <h5 class="custom-control custom-radio badge badge-secondary container-fluid Answers">
+                                <input type="radio" id="Anstwo{{i+1}}" [value]="quiz.Answer2" name="Answer{{i}}" ngModel [(ngModel)]='correctAnswer[i]' class="custom-control-input">
+                                <label class="custom-control-label" for="Anstwo{{i+1}}">{{quiz.Answer2}}</label>
+                            </h5>
+
+
+                            <h5 class="custom-control custom-radio badge badge-secondary container-fluid Answers">
+                                <input type="radio" id="Ansthree{{i+1}}" [value]="quiz.Answer3" name="Answer{{i}}" ngModel [(ngModel)]='correctAnswer[i]' class="custom-control-input">
+                                <label class="custom-control-label" for="Ansthree{{i+1}}">{{quiz.Answer3}}</label>
+                            </h5>
+
+                            <h5 class="custom-control custom-radio badge badge-secondary container-fluid Answers">
+                                <input type="radio" id="Ansfour{{i+1}}" [value]="quiz.Answer4" name="Answer{{i}}" ngModel [(ngModel)]='correctAnswer[i]' class="custom-control-input">
+                                <label class="custom-control-label" for="Ansfour{{i+1}}">{{quiz.Answer4}}</label>
+                            </h5>
+
+                            <h5> Your Answer : {{ studentAnswers[i] }}
+                                <span *ngIf="ShowHideCorrect[i] === 'true'" class="correct">Correct</span>
+                                <span *ngIf="ShowHideCorrect[i] === 'false'" class="incorrect">InCorrect</span>
+                            </h5>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

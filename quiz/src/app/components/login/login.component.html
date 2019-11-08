@@ -1,0 +1,78 @@
+<div class="row">
+
+    <div class="col-md-6 offset-sm-3 col-sm-12">
+        <div class="card-group">
+            <div class="card">
+                <img src="assets/images/login.jpg" class="card-img-top login_image" alt="Login Image .... ">
+                <div class="card-body">
+
+                    <form name="form" #form='ngForm' (ngSubmit)='login(form.value)'>
+
+                        <div class="form-group">
+                            <input type="email" name='Email' #Email='ngModel' ngModel class="form-control" placeholder="Enter Your Email" minlength="10" [pattern]="emailRegEx" required>
+                            <div *ngIf="EmailExist">
+                                <span class="badge badge-danger">Email Not Correct Please Register and Login Again</span>
+                            </div>
+                            <div class="" *ngIf='Email.touched && Email.invalid'>
+                                <div *ngIf='Email?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Your Email Is Required</span>
+                                </div>
+                                <div *ngIf='Email?.errors.minlength'>
+                                    <span class="badge badge-danger container-fluid">Your Email must not less tha 10 char</span>
+                                </div>
+                                <div *ngIf='Email?.errors.pattern'>
+                                    <span class="badge badge-danger container-fluid">Email should be such example@gamil | yahoo.com | net | eg</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input [type]="showPassword? 'text' : 'password'" name='Password' #Password='ngModel' ngModel class="form-control" placeholder="Enter Your Password" minlength="8" maxlength="25" required>
+                                <div (click)='ShowHidePassword()' class="input-group-append" title="show/hide">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div *ngIf="PassExist">
+                                <span class="badge badge-danger">Password Not Correct </span>
+                            </div>
+                            <div class="" *ngIf='Password.touched && Password.invalid'>
+                                <div *ngIf='Password?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Your Password Is Required</span>
+                                </div>
+                                <div *ngIf='Password?.errors.minlength'>
+                                    <span class="badge badge-danger container-fluid">Your Password must not less tha 8 char</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Login As ?</label>
+                            <select class="form-control" name='typeUser' #typeUser='ngModel' ngModel required>
+                                <option disabled></option>
+                                <option value="teacher">Login As Teacher</option>
+                                <option value="student">Login As student</option>
+                            </select>
+                            <div class="" *ngIf='typeUser.touched && typeUser.invalid'>
+                                <div *ngIf='typeUser?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Please select TypeUser Is Required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-block btn-sm" [disabled]='!form.valid'>Login .. </button>
+
+                        <div routerLink='/register' class="badge badge-secondary newAccount">Create New Account ? </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

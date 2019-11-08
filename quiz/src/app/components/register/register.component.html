@@ -1,0 +1,120 @@
+<div class="row">
+
+    <div class="col-md-6 offset-sm-3 col-sm-12">
+        <div class="card-group">
+            <div class="card">
+                <img src="assets/images/login.jpg" class="card-img-top register_image" alt="Login Image .... ">
+                <div class="card-body">
+
+                    <form name="form" #form='ngForm' (ngSubmit)='register(form.value)'>
+
+                        <div class="form-group">
+                            <input type="text" name='FullName' #FullName='ngModel' ngModel [(ngModel)]="updateUser.FullName" class="form-control" placeholder="Enter Your FullName" minlength="8" maxlength="30" [pattern]="fullnameExp" required>
+                            <div class="" *ngIf='FullName.touched && FullName.invalid'>
+                                <div *ngIf='FullName?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Your FullName Is Required</span>
+                                </div>
+                                <div *ngIf='FullName?.errors.minlength'>
+                                    <span class="badge badge-danger container-fluid">Your FullName must not less tha 8 char</span>
+                                </div>
+                                <div *ngIf='FullName?.errors.pattern'>
+                                    <span class="badge badge-danger container-fluid">FullName should such Alaa Naeeim</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="email" name='Email' #Email='ngModel' ngModel [(ngModel)]="updateUser.Email" class="form-control" placeholder="Enter Your Email" minlength="10" [pattern]="emailRegEx" required>
+                            <div *ngIf="checkEmailInDB">
+                                <span class="badge badge-danger">This Email Exist Before .. Try Another </span>
+                            </div>
+                            <div class="" *ngIf='Email.touched && Email.invalid'>
+                                <div *ngIf='Email?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Your Email Is Required</span>
+                                </div>
+                                <div *ngIf='Email?.errors.minlength'>
+                                    <span class="badge badge-danger container-fluid">Your Email must not less tha 10 char</span>
+                                </div>
+                                <div *ngIf='Email?.errors.pattern'>
+                                    <span class="badge badge-danger container-fluid">Email should be such example@gamil | yahoo.com | net | eg</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input [type]="showPassword? 'text' : 'password'" name='Password' #Password='ngModel' ngModel [(ngModel)]="updateUser.Password" class="form-control" placeholder="Enter Your Password" minlength="8" maxlength="25" required>
+                                <div (click)='ShowHidePassword()' class="input-group-append" title="show/hide">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="" *ngIf='Password.touched && Password.invalid'>
+                                <div *ngIf='Password?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Your Password Is Required</span>
+                                </div>
+                                <div *ngIf='Password?.errors.minlength'>
+                                    <span class="badge badge-danger container-fluid">Your Password must not less tha 8 char</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div *ngIf='!iid' class="form-group">
+                            <label>Register As ?</label>
+                            <select class="form-control" name="typeUser" #typeUser="ngModel" ngModel [(ngModel)]="typeUsser" required>
+                                    <option disabled></option>
+                                    <option value="teacher">Register As Teacher</option>
+                                    <option value="student">Register As Student</option>
+                                </select>
+                            <div class="" *ngIf='typeUser.touched && typeUser.invalid'>
+                                <div *ngIf='typeUser?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Please Select TypeUser Is Required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf='iid' class="form-group">
+                            <label>Register As ?</label>
+                            <select class="form-control" name='typeUser' #typeUser='ngModel' ngModel [(ngModel)]="updateUser.typeUser">
+                                    <option disabled></option>
+                                    <option disabled value="teacher">Register As Teacher</option>
+                                    <option disabled value="student">Register As Student</option>
+                                </select>
+                            <div *ngIf='typeUser.touched && typeUser.invalid'>
+                                <div *ngIf='typeUser?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Please Select TypeUser Is Required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" *ngIf='Type === "updateTeacher" || typeUsser === "teacher"'>
+                            <label>Your Specialty ?</label>
+                            <select class="form-control" name='Specialist' #Specialist='ngModel' ngModel [(ngModel)]="updateUser.Specialist" required>
+                                    <option disabled></option>
+                                    <option *ngFor='let subj of subjects' [value]="subj">{{subj}}</option>
+                                </select>
+                            <div class="" *ngIf='Specialist.touched && Specialist.invalid'>
+                                <div *ngIf='Specialist?.errors.required'>
+                                    <span class="badge badge-danger container-fluid">Please Select Your Specialty Is Required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button *ngIf='!iid' class="btn btn-primary btn-block btn-sm" [disabled]='!form.valid'>register .. </button>
+                        <button *ngIf='iid' class="btn btn-primary btn-block btn-sm" [disabled]='!form.valid'>Update Your Info As. {{updateUser.typeUser}} </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
