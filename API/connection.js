@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 
 class Connection {
     constructor() {
-        var mongoURL = 'mongodb://localhost:27017/quizzes';
-        //  var mongoURL = "mongodb+srv://alaanaeim125:ALAAalaa125@cluster0-uzoao.mongodb.net/products?retryWrites=true&w=majority"
+        // var mongoURL = 'mongodb://localhost:27017/quizzes';
+        var mongoURL = "mongodb+srv://alaanaeim125:ALAAalaa125@cluster0-xyvb3.mongodb.net/quizzes?retryWrites=true&w=majority";
         mongoose.connect(mongoURL, {
             useNewUrlParser: true,
             useCreateIndex: false,
