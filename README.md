@@ -18,11 +18,15 @@
 • <strong>student see result Quiz</strong><br>
 • <strong>student have profile</strong><br>
 
-<h2>Selected Technologies :</h2>
+<h2>Selected Technologies</h2>
 
 • <strong>Front-End [ Angular 8 - Bootstrap ]</strong><br>
 • <strong>Back-End [ Node Js - Express Js ]</strong><br>
 • <strong>Database [ Mono DB ]</strong><br>
 
 
+<h2>Screenshots </h2>
+<div class="row">
+  <div class='col-3'><img src="ScreenShots/1.png"></div>
+</div>
 
