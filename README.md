@@ -26,7 +26,7 @@
 
 
 <h2>Screenshots </h2>
-  <img style='float: left' width='200' height='200 'src="ScreenShots/1.png"><img style='float: left' width='200' height='200 'src="ScreenShots/1.png">
+  <div><img style='float: left' width='200' height='200 'src="ScreenShots/1.png"><img style='float: left' width='200' height='200' src="ScreenShots/1.png"></div>
   <img src="ScreenShots/2.png">
   <img src="ScreenShots/3.png">
   <img src="ScreenShots/4.png">
