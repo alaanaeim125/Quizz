@@ -41,6 +41,11 @@
     <img style='text-align: center: left' height='500' src="ScreenShots/11.png"><br><br>
   </div>
 
+<h1>Deployed Site On: </h1>
+1. <strong>Database On Atlas</strong><br>
+2. <strong>Node JS API on Heroku</strong><br>
+3. <strong><a href="https://quiz-f25d7.web.app/">Angular On Firebase</a></strong><br>
+
 <h1>About me</h1>
 1. <strong><a href="https://www.linkedin.com/in/alaa-naeeim-5503a3177/">LinkedIn</a></strong><br>
 2. <strong><a href="https://www.facebook.com/alaa.naeim.98">Facebook</a></strong>
