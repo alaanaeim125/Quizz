@@ -27,16 +27,16 @@
 
 <h2>Screenshots </h2>
   <div>
-    <img class='container-fluid' style='test-align: center: left' height='500 'src="ScreenShots/1.png"><br><br><br><br>
-    <img style='float: right' height='400' src="ScreenShots/2.png">
-    <img style='float: right' height='400' src="ScreenShots/3.png">
-    <img style='float: right' height='400' src="ScreenShots/4.png">
-    <img style='float: right' height='400' src="ScreenShots/5.png">
-    <img style='float: right' height='400' src="ScreenShots/6.png">
-    <img style='float: right' height='400' src="ScreenShots/7.png">
-    <img style='float: right' height='400' src="ScreenShots/8.png">
-    <img style='float: right' height='400' src="ScreenShots/9.png">
-    <img style='float: right' height='400' src="ScreenShots/10.png">
-    <img style='float: right' height='400' src="ScreenShots/11.png">
-    <img style='float: right' height='400' src="ScreenShots/12.png">
+    <img style='text-align: center: left' height='500' src="ScreenShots/1.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/2.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/3.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/4.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/5.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/6.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/7.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/8.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/9.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/10.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/11.png"><br><br><br>
+    <img style='text-align: center: left' height='500' src="ScreenShots/12.png"><br><br><br>
   </div>
