@@ -28,7 +28,7 @@
 <h2>Screenshots </h2>
   <div>
     <img style='float: left' width='400' height='400 'src="ScreenShots/1.png">
-    <img style='float: left' width='400' height='400' src="ScreenShots/1.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/1.png">
     </div>
   <img src="ScreenShots/2.png">
   <img src="ScreenShots/3.png">
