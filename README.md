@@ -22,7 +22,7 @@
 
 • <strong>Front-End [ Angular 8 - Bootstrap ]</strong><br>
 • <strong>Back-End [ Node Js - Express Js - JWT ]</strong><br>
-• <strong>Database [ Mono DB ]</strong><br>
+• <strong>Database [ Mogno DB ] </strong><br>
 
 
 <h2>Screenshots </h2>
