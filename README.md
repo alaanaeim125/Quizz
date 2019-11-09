@@ -9,19 +9,19 @@
 
 <h2>Key features:</h2>
 • <strong>teacher can create new Quiz</strong><br>
-• teacher can update Quiz<br>
-• teacher can save Quiz and published it when ready<br>
-• student can see all Quizes<br>
-• teacher have profile <br>
-• student can solve || test any Quiz <br>
-• student see result Quiz<br>
-• student have profile<br>
+• <strong>teacher can update Quiz</strong><br>
+• <strong>teacher can save Quiz and published it when ready</strong><br>
+• <strong>student can see all Quizes</strong><br>
+• <strong>teacher have profile </strong><br>
+• <strong>student can solve || test any Quiz</strong> <br>
+• <strong>student see result Quiz</strong><br>
+• <strong>student have profile</strong><br>
 
 <h2>Selected Technologies:</h2>
 
-• Front-End [ Angular 8 - Bootstrap ]<br>
-• Back-End [ Node Js - Express Js ]<br>
-• Database [ Mono DB ]<br>
+• <strong>Front-End [ Angular 8 - Bootstrap ]</strong><br>
+• <strong>Back-End [ Node Js - Express Js ]</strong><br>
+• <strong>Database [ Mono DB ]</strong><br>
 
 
 
