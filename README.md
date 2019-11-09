@@ -28,5 +28,8 @@
 <h2>Screenshots </h2>
 <div class="row">
   <div class='col-3'><img src="ScreenShots/1.png"></div>
+  <div class='col-3'><img src="ScreenShots/2.png"></div>
+  <div class='col-3'><img src="ScreenShots/3.png"></div>
+  <div class='col-3'><img src="ScreenShots/4.png"></div>
 </div>
 
