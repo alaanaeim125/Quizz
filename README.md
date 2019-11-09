@@ -35,7 +35,7 @@
 - Profile component have all information about user or teacher , profile
   student have name, email, number of quizzes that examed it , and he can
   show any quiz again
-  
+   
 - Profile teacher have all information name, email, number of quizzes that
   publish and saved and quizzes published and saved , he can update any
   quiz from profile , all teacher profile have all quizzes that he make it 
