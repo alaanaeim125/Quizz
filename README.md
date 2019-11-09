@@ -40,3 +40,7 @@
     <img style='text-align: center: left' height='500' src="ScreenShots/12.png"><br><br>
     <img style='text-align: center: left' height='500' src="ScreenShots/11.png"><br><br>
   </div>
+
+<h1>About me</h1>
+1. <a href="https://www.linkedin.com/in/alaa-naeeim-5503a3177/">LinkedIn</a>
+2. <a href="https://www.facebook.com/alaa.naeim.98">Facebook</a>
