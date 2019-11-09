@@ -26,7 +26,12 @@
 
 
 <h2>Screenshots </h2>
-  <div><img style='float: left' width='200' height='200 'src="ScreenShots/1.png"><img style='float: left' width='200' height='200' src="ScreenShots/1.png"></div>
+  <div class='row container'>
+    <div class='col-3'><img style='float: left' width='200' height='200 'src="ScreenShots/1.png"></div>
+    <div class='col-3'><img style='float: left' width='200' height='200 'src="ScreenShots/1.png"></div>
+    <div class='col-3'><img style='float: left' width='200' height='200 'src="ScreenShots/1.png"></div>
+    <div class='col-3'><img style='float: left' width='200' height='200 'src="ScreenShots/1.png"></div>
+  </div>
   <img src="ScreenShots/2.png">
   <img src="ScreenShots/3.png">
   <img src="ScreenShots/4.png">
