@@ -6,7 +6,7 @@
 </h4>
 
 <h2>Demo </h2>
-<a href="https://quiz-f25d7.web.app/">Quiz Site</a>
+   <strong><a href="https://quiz-f25d7.web.app/">Quiz Site</a></strong>
 
 <h2>Key features:</h2>
 • <strong>teacher can create new Quiz</strong><br>
