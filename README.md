@@ -8,7 +8,7 @@
 <a href="https://quiz-f25d7.web.app/">Quiz Site</a>
 
 <h2>Key features:</h2>
-• teacher can create new Quiz<br>
+• <strong>teacher can create new Quiz</strong><br>
 • teacher can update Quiz<br>
 • teacher can save Quiz and published it when ready<br>
 • student can see all Quizes<br>
@@ -16,5 +16,12 @@
 • student can solve || test any Quiz <br>
 • student see result Quiz<br>
 • student have profile<br>
+
+<h2>Selected Technologies:</h2>
+
+• Front-End [ Angular 8 - Bootstrap ]<br>
+• Back-End [ Node Js - Express Js ]<br>
+• Database [ Mono DB ]<br>
+
 
 
