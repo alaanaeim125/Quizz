@@ -27,7 +27,7 @@
 
 <h2>Screenshots </h2>
   <div>
-    <img class='container-fluid' style='test-align: center: left' height='500 'src="ScreenShots/1.png">
+    <img class='container-fluid' style='test-align: center: left' height='500 'src="ScreenShots/1.png"><br>
     <img style='float: right' height='400' src="ScreenShots/2.png">
     <img style='float: right' height='400' src="ScreenShots/3.png">
     <img style='float: right' height='400' src="ScreenShots/4.png">
