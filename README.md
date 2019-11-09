@@ -8,13 +8,13 @@
 <a href="https://quiz-f25d7.web.app/">Quiz Site</a>
 
 <h2>Key features:</h2>
-<h5>• teacher can create new Quiz</h5>
-<h5>• teacher can update Quiz </h5>
-<h5>• teacher can save Quiz and published it when ready</h5>
-<h5>• student can see all Quizes</h5>
-<h5>• teacher have profile </h5>
-<h5>• student can solve || test any Quiz </h5>
-<h5>• student see result Quiz</h5>
-<h5>• student have profile</h5>
+• teacher can create new Quiz<br>
+• teacher can update Quiz<br>
+• teacher can save Quiz and published it when ready<br>
+• student can see all Quizes<br>
+• teacher have profile <br>
+• student can solve || test any Quiz <br>
+• student see result Quiz<br>
+• student have profile<br>
 
 
