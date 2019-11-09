@@ -42,5 +42,5 @@
   </div>
 
 <h1>About me</h1>
-1. <a href="https://www.linkedin.com/in/alaa-naeeim-5503a3177/">LinkedIn</a>
-2. <a href="https://www.facebook.com/alaa.naeim.98">Facebook</a>
+1. <strong><a href="https://www.linkedin.com/in/alaa-naeeim-5503a3177/">LinkedIn</a></strong><br><br>
+2. <strong><a href="https://www.facebook.com/alaa.naeim.98">Facebook</a></strong>
