@@ -28,7 +28,17 @@
 <h2>Screenshots </h2>
   <div>
     <img style='float: left' width='400' height='400 'src="ScreenShots/1.png">
-    <img style='float: right' width='400' height='400' src="ScreenShots/1.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/2.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/3.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/4.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/5.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/6.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/7.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/8.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/9.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/10.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/11.png">
+    <img style='float: right' width='400' height='400' src="ScreenShots/12.png">
     </div>
   <img src="ScreenShots/2.png">
   <img src="ScreenShots/3.png">
